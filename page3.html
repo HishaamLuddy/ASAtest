@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+
+        body{
+            background-color: rgb(0, 0, 0);
+            background-image: url("background2.png"); 
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin:0;
+            overflow-x: hidden;
+        }
+
+        .menu_buttons{      
+            width:100%;
+            border:none;
+            justify-content:right;
+        }
+
+        a:hover {
+            color: rgb(255, 6, 6);
+            text-decoration: underline;
+                
+        }
+    
+        button{
+            width: 100px;
+            height: 50px;
+            background-color: transparent;
+            border: none;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: medium;
+            
+    
+        }
+
+        a{
+            text-decoration: none;
+            color: aliceblue;
+        }
+
+
+        .menu{
+            display:flex;
+            gap: 400px;   
+            width:100%; 
+        }
+
+        .menu img{
+            height: 170px;
+            width: 170px;
+            border-radius: 100%;
+        }
+
+
+        .redtxt{
+            color: aliceblue;
+            display: flex;
+            flex-direction:column;
+            width:600px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: medium;
+
+        }
+        h2{
+            
+            text-align:center;
+            color:red;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            
+        
+        }
+
+        .mission{
+            color: aliceblue;
+            display: flex;
+            flex-direction:column;
+            width:500px;
+            text-align: center;
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: medium;
+            border: 2px solid rgb(255, 0, 0);
+            border-radius: 9px;
+            padding: 10px;
+        }
+    
+        .ben{
+            color: aliceblue;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: medium;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width:100%;
+        
+        }
+        .menu_buttons2{
+            display:none;
+            z-index:2;
+            position:absolute;
+            background-color:black;
+            opacity:0.9;
+            width: 100%;
+            flex-direction:column;  
+            
+            transition: opacity 0.3s ease-in-out;
+    
+            animation: slideDown 0.5s ease-in-out;
+        }
+
+        #hamburger-button{
+            color:white;
+            font-size:47px;
+            cursor: pointer;
+            display:none;
+            transition:0.5s ease-in-out;
+        }
+
+        #hamburger-button:hover{
+            font-size:52px;
+            transition:0.5s ease-in-out;
+        }
+
+        footer{
+            position:relative;
+            display: flex; 
+            justify-content: center;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: red;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: x-small;
+        }
+
+        @keyframes slideDown {
+            0% {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 0.9;
+            }
+        }
+
+        @media only screen and (max-width:1050px){
+            .menu{
+                gap:300px;
+            }
+        }
+
+
+        @media only screen and (max-width:950px){
+            .menu{
+                gap:200px;
+            }
+        }
+
+        @media only screen and (max-width:850px){
+            .menu{
+                gap:100px;
+            }
+
+        }
+
+        @media only screen and (max-width:750px){
+            .menu{
+                gap:0px;
+            }
+        }
+
+        @media only screen and (max-width:600px){
+
+            .menu{
+                align-items: center;
+            }
+            .menu_buttons button{
+                display:none;
+            }
+
+            #hamburger-button{
+                display:flex;
+                color:rgb(189, 181, 175);
+                align-items:center;
+                justify-content: center;
+                width:48px;
+                height:48px;
+                
+            }
+
+
+            .menu img {
+                width:100px;
+                height:100px;
+            }
+
+            
+
+            .redtxt{
+                width:90%;
+            }
+
+            .mission{
+                width:90%;
+            }
+
+            .menu_buttons2 {
+                height:180px;
+            }
+        }
+
+        @media only screen and (max-width:561px){
+            .menu_buttons2{
+                height:193px;
+            }
+        }
+
+        @media only screen and (max-width:463px ){
+            .menu_buttons2{
+                height:215px;
+            }
+
+            .ben{
+                width:100%;
+            }
+        }
+
+        @media only screen and (max-width:386px){
+            .menu_buttons2{
+                height:240px;
+                gap:20px;
+            }
+        }
+
+        @media only screen and (max-width:361px){
+            .menu_buttons2{
+                height:260px;
+            }
+        }
+
+        @media only screen and (max-width:310px){
+            .menu_buttons2{
+                height:285px;
+                gap:28px;
+            }
+        }
+
+        @media only screen and (max-width:287px){
+            .menu_buttons2{
+                height:300px;
+            }
+        }
+
+
+        
+
+    </style>
+
+
+
+</head>
+<body>
+    <div class="menu">
+        <img src="Logoc.png" alt="Profile Image" class="fixed-image" >
+        <div class="menu_buttons">
+            <button type="button" name="button1"><a href="index.html">Home</a></button>
+            <button type="button" name="button2"><a href="page3.html">About</a></button>
+            <button type="button" name="button4"><a href="Page2.html">Services</a></button>
+            <button type="button" name="button4"><a href="Page4.html">Contact Us</a></button>
+        </div>
+        <button name="hamburger-button" id="hamburger-button">&#9776;</button>
+    </div>
+
+    <div class="menu_buttons2">
+        <button type="button" name="button1"><a href="Page1.html">Home</a></button>
+        <button type="button" name="button2"><a href="page3.html">About</a></button>
+        <button type="button" name="button4"><a href="Page2.html">Services</a></button>
+        <button type="button" name="button4"><a href="Page4.html">Contact Us</a></button>
+    </div>
+    
+    <div class="ben">
+        <div class="redtxt">
+        <h2>About us</h2>
+
+            <ul>
+                <li>
+                    Founded in 2017 as a response company to the residential market in Cape Town;
+                    ASA has grown since into an end-to-end security solution company across all sectors
+                    providing recurring security services in the Western Cape as well as Gauteng province.
+                </li>
+                <br>
+                <li>
+                    With customised security services, our aim is to develop long-term strategic partnerships with our clients.
+                </li>
+                <br>
+                <li>
+                    ASA has become a progressive security and facilities service company that provides proactive security services
+                    and reliable smart technology to deliver tailored, integrated security solutions that allow clients to focus on their core business.
+                </li>
+            </ul>
+        </div>
+    
+
+        <div class="redtxt">
+            <h2>Why clients favour our services.</h2>
+        
+            <p> We distinguish ourselves through our direct oversight of client contracts by company directors 24/7,
+                who are deeply involved in ensuring client satisfaction and strategic alignment. Our managers and supervisors
+                focus on the well-being and performance of our guards and workforce, allowing for dedicated attention to both client needs and employee welfare.
+            </p>
+        </div>
+
+
+
+        <div class="mission">
+            <h2>Mission Statment</h2>
+            <p>To Provide Holistic Tailor Made Security Solutions Based on the Individual Client Business Profile </p>
+        </div>
+    </div>
+
+    <script>
+
+        const hamburgerButton = document.getElementById("hamburger-button");
+        const secondMenu = document.getElementsByClassName("menu_buttons2")[0];
+        const fullMenu = document.getElementsByClassName("menu")[0];
+    
+        const firstMenu = document.getElementsByClassName('menuButtons')[0];
+    
+    
+        hamburgerButton.addEventListener('click', function() {
+            if (secondMenu.style.display === "none" || secondMenu.style.display === "") {
+                // Show the menu
+                secondMenu.style.display = "flex";
+                secondMenu.style.opacity = "0.9"; // Make it fully opaque
+            } else {
+                // Hide the menu with a fade-out effect
+                secondMenu.style.opacity = "0"; // Fade out
+                setTimeout(function() {
+                    secondMenu.style.display = "none"; // Hide after fade-out
+                }, 300);
+            }
+        });
+    
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 600) {
+                secondMenu.style.display = "none";
+            }
+        });
+    
+    </script>
+
+</body>
+<br>
+<br>
+<br>
+<footer>
+    <p>Copyright © 2024 Africa Security Agency</p> 
+ </footer>
+</html>

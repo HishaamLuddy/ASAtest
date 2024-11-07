@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+    body{
+        height:100vh;
+
+        background-color: rgb(0, 0, 0);
+        background-image: url("background2.png"); 
+        background-repeat: no-repeat;
+        background-size: cover; 
+        overflow-x: hidden;
+        
+        
+    }
+
+    .menu_buttons{
+        border-style: groove;
+        text-align: center;
+        border: none; 
+    }
+
+    a:hover {
+        color: rgb(255, 6, 6);
+        text-decoration: underline;
+            
+    }
+   
+    button{
+        width: 100px;
+        height: 50px;
+        background-color: transparent;
+        border: none;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: medium;
+  
+    }
+
+    a{
+        text-decoration: none;
+        color: aliceblue;
+    }
+
+
+    .menu{
+        display:flex;
+        gap: 400px;    
+    }
+
+  .menu img{
+    height: 170px;
+    width: 170px;
+    border-radius: 100%;
+  }
+ 
+    
+  .redtxt{
+    color: aliceblue;
+    display: flex;
+    flex-direction:column;
+    width:600px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    
+  }
+    h2{
+        display: flex;
+        align-items: center;
+        color:red;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        
+    
+    }
+.main-container{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    gap:10px;
+
+    
+}
+   
+.emailblob {
+    display:flex;
+    justify-content: center;
+    width: 188px; /* Adjust the width as needed */
+    text-align: center;
+    background-color: #6a6a6a;
+    border-radius: 6%;
+    opacity: 0.8;
+    background-repeat: no-repeat;
+    background-size: 100px; /* Adjust image size to fit the table cell */
+    align-items: center;
+    padding: 70px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+.emailblob {
+    background-image: url(email.png);
+}
+
+.mission{
+            color: aliceblue;
+            display: flex;
+            flex-direction:column;
+            width:500px;
+            text-align: center;
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: medium;
+            border: 2px solid rgb(255, 0, 0);
+            border-radius: 9px;
+            padding: 10px;
+        }
+
+
+        .menu_buttons2{
+            display: none;
+            opacity: 0.9;
+            z-index: 2;
+            position: absolute;
+            background-color: black;
+            width: 100%;
+            flex-direction: column;
+    
+            transition: opacity 0.3s ease-in-out;
+    
+            animation: slideDown 0.5s ease-in-out;
+            
+
+        }
+
+        #hamburger-button{
+            color:white;
+            font-size:47px;
+            cursor: pointer;
+            display:none;
+            transition:0.5s ease-in-out;
+        }
+
+        #hamburger-button:hover{
+            font-size:52px;
+            transition:0.5s ease-in-out;
+        }
+
+        footer{
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: red;
+            color: white;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: x-small;
+        }
+
+        @keyframes slideDown {
+            0% {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 0.9;
+            }
+        }
+@media only screen and (max-width:1050px){
+            .menu{
+                gap:300px;
+            }
+        }
+
+
+        @media only screen and (max-width:950px){
+            .menu{
+                gap:200px;
+            }
+        }
+
+        @media only screen and (max-width:850px){
+            .menu{
+                gap:100px;
+            }
+
+
+            .menu img{
+                width:150px;
+                height:150px;
+            }
+        }
+
+        @media only screen and (max-width:750px){
+            .menu{
+                gap:0px;
+            }
+
+            .menu img{
+                width:130px;
+                height:130px;
+            }
+        }
+
+        @media only screen and (max-width:600px){
+
+            .menu{
+                align-items: center;
+                gap: 200px;
+            }
+            .menu_buttons button{
+                display:none;
+            }
+
+            #hamburger-button{
+                display:flex;
+                color:rgb(189, 181, 175);
+                align-items:center;
+                justify-content: center;
+                width:48px;
+                height:48px;
+                
+            }
+
+
+
+            .menu img {
+                width:100px;
+                height:100px;
+            }
+
+            .menu_buttons2{
+                height:330px;
+            }
+
+
+            
+
+        }
+
+        @media only screen and (max-width:550px){
+            .menu{
+                align-items: center;
+                gap: 180px;
+            }
+
+            .mission{
+                width:400px;
+            }
+
+            
+        }
+
+
+        @media only screen and (max-width:500px){
+            .menu_buttons2{
+                height:250px;
+            }
+
+            
+        }
+
+        @media only screen and (max-width:520px){
+            .menu{
+                gap:160px;
+            }
+
+            
+        }
+
+
+
+        @media only screen and (max-width:475px){
+
+            .menu{
+                gap: 140px;
+            }
+        }
+
+        @media only screen and (max-width:440px){
+
+            .menu{
+                gap: 100px;
+            }
+
+            .mission{
+                width:300px;
+            }
+        }
+
+        @media only screen and (max-width:360px){
+
+            .menu{
+                gap: 80px;
+            }
+
+            .mission{
+                width:200px;
+            }
+
+            .emailblob{
+                width:100px;
+            }
+        }
+
+        @media only screen and (max-width:315px){
+
+            .menu{
+                gap:70px;
+                
+            }
+        }
+
+        @media only screen and (max-width:290px){
+
+            .menu{
+                gap:55px;
+                
+            }
+        }
+
+        @media only screen and (max-width:260px){
+
+            .menu{
+                gap:40px;
+                
+            }
+
+            .emailblob{
+                width:65px;
+
+            }
+
+            .mission{
+                width:180px;
+            }
+        }
+
+
+
+
+        
+
+        
+
+
+    </style>
+
+
+
+</head>
+<body>
+    <<div class="menu">
+        <img src="Logoc.png" alt="Profile Image" class="fixed-image" >
+        <div class="menu_buttons">
+            <button type="button" name="button1"><a href="index.html">Home</a></button>
+            <button type="button" name="button2"><a href="page3.html">About</a></button>
+            <button type="button" name="button4"><a href="Page2.html">Services</a></button>
+            <button type="button" name="button4"><a href="Page4.html">Contact Us</a></button>
+        </div>
+        <button name="hamburger-button" id="hamburger-button">&#9776;</button>
+    </div>
+
+    <div class="menu_buttons2">
+        <button type="button" name="button1"><a href="Page1.html">Home</a></button>
+        <button type="button" name="button2"><a href="page3.html">About</a></button>
+        <button type="button" name="button4"><a href="Page2.html">Services</a></button>
+        <button type="button" name="button4"><a href="Page4.html">Contact Us</a></button>
+    </div>
+<br><div class="main-container">
+        <div class="emailblob">       
+            <a href="mailto:info@africansecurityagency.co.za">Click here to<br>Contact Us Via Email</a>
+        </div>
+
+        <div class="mission">
+            <h2>Mission Statment</h2>
+            <p>To Provide Holistic Tailor Made Security Solutions Based on the Individual Client Business Profile </p>
+        </div>
+    </div>
+
+    <script>
+
+        const hamburgerButton = document.getElementById("hamburger-button");
+        const secondMenu = document.getElementsByClassName("menu_buttons2")[0];
+        const fullMenu = document.getElementsByClassName("menu")[0];
+    
+        const firstMenu = document.getElementsByClassName('menuButtons')[0];
+    
+    
+        hamburgerButton.addEventListener('click', function() {
+            if (secondMenu.style.display === "none" || secondMenu.style.display === "") {
+                // Show the menu
+                secondMenu.style.display = "flex";
+                secondMenu.style.opacity = "0.9"; // Make it fully opaque
+            } else {
+                // Hide the menu with a fade-out effect
+                secondMenu.style.opacity = "0"; // Fade out
+                setTimeout(function() {
+                    secondMenu.style.display = "none"; // Hide after fade-out
+                }, 300);
+            }
+        });
+    
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 600) {
+                secondMenu.style.display = "none";
+            }
+        });
+    
+    </script>
+
+</body>
+<footer>
+    <p>Copyright © 2024 Africa Security Agency</p> 
+ </footer>
+</html>
+     
