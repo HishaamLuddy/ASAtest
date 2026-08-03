@@ -1,464 +1,406 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <style>
-        body{  
-           margin:0;
-           background-color: black;
-           width:100%;
-           background-image: url("background2.png");
-           background-position:center;
-           background-size:cover;
-           background-repeat:no-repeat;
-           height:100vh;
-            overflow: hidden;
-        }
- 
-        .nav{
-            display:flex;
-            justify-content: center;
-            align-items:flex-end;
-            height:101px;
-            width:99%;
-        }
- 
-       .menu_buttons{
-        border-style: groove;
-        border: none;
-        
- 
- 
-       
-        }
-        a:hover {
-                color: rgb(255, 6, 6);
-                text-decoration: underline;
-               
-        }
- 
-        button{
-            width: 100px;
-            height: 50px;
-            background-color: transparent;
-            border: none;
-            border: none;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 15px;
-           
- 
-        }
- 
-        a{
-            text-decoration: none;
-            color: aliceblue;
-           
-        }
-        .logo{
-            width:100%;
-            height:550px;
-            display:flex;
-            justify-content: center;
-            z-index:2;
-            position:absolute; 
-            align-items:center;
-            
-           
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Africa Security Agency | Corporate & Industrial Security</title>
+<meta name="description" content="Africa Security Agency provides corporate and industrial security solutions trusted by leading organizations.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #0E161C;
+    --surface: #16212B;
+    --line: #263440;
+    --text: #E9EEF1;
+    --text-muted: #9FAEB8;
+    --accent: #4C90A3;
+    --accent-strong: #6BAEC0;
+    --signal: #D99A4E;
+  }
 
-        .background{
-            width: 500px;
-            display:flex;
-            flex-direction:column;
-            align-items: center;
-            border: none;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            
-        }
- 
-        #home-background{
-            border-radius:100%;
+  *{ box-sizing: border-box; }
 
-        }
- 
-       
- 
-        .slider {
-            overflow: hidden;
-            white-space: nowrap;
-            width: 100%; /* Set as per requirement */
-            z-index:1;
-            display:flex;
-            align-items:center;
-           
-           
- 
-        }
- 
-        .slide-track {
-            display: inline-flex;
-            animation: scroll 15s linear infinite;     
-            gap:60px;
-            align-items:center;
-            height:500px;
- 
-        }
+  html{ scroll-behavior: smooth; }
 
-        #hamburger-button{
-            color:white;
-            font-size:47px;
-            cursor: pointer;
-            display:none;
-            transition:0.5s ease-in-out;
-        }
+  body{
+    margin: 0;
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', -apple-system, sans-serif;
+  }
 
-        #hamburger-button:hover{
-            font-size:52px;
-            transition:0.5s ease-in-out;
-        }
+  h1, h2, h3{
+    font-family: 'Oswald', 'Segoe UI', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    margin: 0;
+  }
 
-        .menu_buttons2{
-            display: none;
-            opacity: 0.9;
-            z-index: 3;
-            position: absolute;
-            background-color: black;
-            width: 100%;
-            flex-direction: column;
-            border: none;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            transition: opacity 0.3s ease-in-out;
-    
-            animation: slideDown 0.5s ease-in-out;
-            
+  a{
+    color: inherit;
+    text-decoration: none;
+  }
 
-        }
+  /* ---------- Nav ---------- */
 
-        footer{
-            position:fixed;
-            display: flex; 
-            justify-content: center;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            background-color: red;
-            color: white;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: x-small;
-        }
+  header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 40px;
+    background: linear-gradient(to bottom, rgba(14,22,28,0.9), rgba(14,22,28,0));
+  }
 
-        @keyframes slideDown {
-            0% {
-                transform: translateY(-100%);
-                opacity: 0;
-            }
-            100% {
-                transform: translateY(0);
-                opacity: 0.9;
-            }
-        }
- 
- 
- 
-        @keyframes scroll {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-50.7%);
-            }
-        }
- 
-        .slide-track h1{
-            color:white;
-           
-            font-family: 'Courier New', Courier, monospace;
-            text-align:center;
-        }
+  .brand{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
 
-        h2{
-    
-            color:white;
-            font-size:35px;
-        }
+  .brand img{
+    height: 32px;
+    width: 32px;
+    object-fit: contain;
+  }
 
-        @media only screen and (max-width:1100px){
-            .slide-track img{
-                width:320px;
-                height:160px;
-            }
+  nav ul{
+    list-style: none;
+    display: flex;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+  }
 
-            #home-background{
-                width:320px;
+  nav a{
+    display: inline-block;
+    padding: 10px 16px;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    border-radius: 3px;
+    transition: color 0.2s ease, background-color 0.2s ease;
+  }
 
-            }
+  nav a:hover{
+    color: var(--accent-strong);
+    background-color: rgba(255,255,255,0.04);
+  }
 
-            .slide-track h1{
-                font-size:30px;
-            }
-        }
+  #hamburger-button{
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text);
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 4px 8px;
+  }
 
-        @media only screen and (max-width:980px){
-            .slide-track img{
-                width:270px;
-                height:140px;
-            }
+  .mobile-menu{
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 25;
+    background: var(--surface);
+    border-bottom: 1px solid var(--line);
+    padding: 14px 0;
+  }
 
-            #home-background{
-                width:300px;
+  .mobile-menu a{
+    padding: 14px 24px;
+    font-size: 15px;
+    border-top: 1px solid var(--line);
+  }
 
-            }
+  .mobile-menu a:first-child{
+    border-top: none;
+  }
 
-            .slide-track h1{
-                font-size:28px;
-            }
+  /* ---------- Hero ---------- */
 
+  .hero{
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 120px 24px 80px;
+    background-image:
+      linear-gradient(180deg, rgba(14,22,28,0.55) 0%, rgba(14,22,28,0.85) 75%, var(--bg) 100%),
+      url("background2.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 
-        }
+  .hero::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(255,255,255,0.025) 0, rgba(255,255,255,0.025) 1px, transparent 1px, transparent 64px),
+      repeating-linear-gradient(90deg, rgba(255,255,255,0.025) 0, rgba(255,255,255,0.025) 1px, transparent 1px, transparent 64px);
+    pointer-events: none;
+  }
 
-        @media only screen and (max-width:980px){
-            .slide-track img{
-                width:230px;
-                height:120px;
-            }
+  .radar{
+    position: relative;
+    width: 320px;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
 
-            #home-background{
-                width:300px;
+  .radar-ring{
+    position: absolute;
+    border: 1px solid rgba(76,144,163,0.35);
+    border-radius: 50%;
+  }
 
-            }
+  .radar-ring.r1{ width: 100%; height: 100%; }
+  .radar-ring.r2{ width: 72%; height: 72%; }
+  .radar-ring.r3{ width: 44%; height: 44%; }
 
-            @keyframes scroll {
-                0% {
-                    transform: translateX(0);
-                }
-                100% {
-                    transform: translateX(-50.9%);
-                }
-            }
+  .radar-sweep{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg, rgba(76,144,163,0.5), transparent 28%);
+    animation: sweep 6s linear infinite;
+    mask-image: radial-gradient(circle, black 60%, transparent 100%);
+  }
 
-            
-        }
+  @keyframes sweep{
+    to{ transform: rotate(360deg); }
+  }
 
-        @media only screen and (max-width:800px){
-            .slide-track h1{
-                font-size:24px;
-            }
+  .logo-mark{
+    position: relative;
+    z-index: 2;
+    width: 46%;
+    height: 46%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(233,238,241,0.15);
+    background-color: var(--surface);
+  }
 
-            .slide-track img{
-                width:200px;
-                height:100px;
-            }
+  .hero h2{
+    position: relative;
+    z-index: 2;
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+  }
 
-            #home-background{
-                width:250px;
+  .hero .tagline{
+    position: relative;
+    z-index: 2;
+    color: var(--text-muted);
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: center;
+    max-width: 480px;
+    line-height: 1.6;
+  }
 
-            }
+  .cta{
+    position: relative;
+    z-index: 2;
+    margin-top: 32px;
+    display: inline-block;
+    padding: 14px 32px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--bg);
+    background-color: var(--signal);
+    border-radius: 2px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
 
-            .slide-track{
-                height:470px;
-            }
+  .cta:hover{
+    background-color: #e8ab63;
+    transform: translateY(-1px);
+  }
 
-            @keyframes scroll {
-                0% {
-                    transform: translateX(0);
-                }
-                100% {
-                    transform: translateX(-51%);
-                }
-            }
-        }
+  /* ---------- Trusted-by marquee ---------- */
 
-        @media only screen and (max-width:700px){
-            .slide-track h1{
-                font-size:20px;
-            }
-            .slide-track img{
-                width:180px;
-                height:80px;
-            }
+  .trusted{
+    padding: 60px 0 70px;
+    border-top: 1px solid var(--line);
+    background-color: var(--surface);
+  }
 
-            #home-background{
-                width:200px;
+  .trusted-label{
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 13px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+  }
 
-            }
-            @keyframes scroll {
-                0% {
-                    transform: translateX(0);
-                }
-                100% {
-                    transform: translateX(-51.2%);
-                }
-            }
-        }
+  .slider{
+    overflow: hidden;
+    width: 100%;
+    -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  }
 
-        @media only screen and (max-width:580px){
-            .slide-track h1{
-                font-size:19px;
-            }
-            .slide-track img{
-                width:160px;
-                height:70px;
-            }
+  .slide-track{
+    display: inline-flex;
+    align-items: center;
+    gap: 72px;
+    animation: scroll 22s linear infinite;
+    width: max-content;
+  }
 
-            #home-background{
-                width:180px;
+  .slide-track img{
+    height: 56px;
+    width: auto;
+    max-width: 160px;
+    object-fit: contain;
+    opacity: 0.7;
+    filter: grayscale(1) brightness(1.4);
+    transition: opacity 0.2s ease, filter 0.2s ease;
+  }
 
-            }
-        }
+  .slide-track img:hover{
+    opacity: 1;
+    filter: grayscale(0) brightness(1);
+  }
 
-        @media only screen and (max-width:500px){
-            .menu_buttons button{
-                display:none;
-            }
+  @keyframes scroll{
+    from{ transform: translateX(0); }
+    to{ transform: translateX(-50%); }
+  }
 
-            #hamburger-button{
-                display:flex;
-                color:rgb(189, 181, 175);
-                align-items:center;
-                justify-content: center;
-                width:48px;
-                height:48px;
+  /* ---------- Footer ---------- */
 
-            }
-            .menu_buttons{
-                width:100%;
-                display:flex;
-                justify-content: flex-end;
-            }
-            h2{
-                font-size:30px;
-            }
+  footer{
+    padding: 22px 24px;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 12px;
+    border-top: 1px solid var(--line);
+  }
 
-            
-        }
+  @media (prefers-reduced-motion: reduce){
+    .radar-sweep, .slide-track{ animation: none; }
+  }
 
-        @media only screen and (max-width:450px){
-            .slide-track h1{
-                font-size:18px;
-            }
-            .slide-track img{
-                width:150px;
-                height:70px;
-            }
+  @media only screen and (max-width: 700px){
+    .hero h2{ font-size: 30px; }
+    .radar{ width: 240px; height: 240px; }
+  }
 
-            #home-background{
-                width:160px;
+  @media only screen and (max-width: 640px){
+    nav ul{ display: none; }
+    #hamburger-button{ display: block; }
+    header{ padding: 16px 20px; }
+  }
 
-            }
-
-            h2{
-                font-size:27px;
-            }
-        }
-
-        @media only screen and (max-width:360px){
-            .slide-track h1{
-                font-size:14px;
-            }
-            .slide-track img{
-                width:100px;
-                height:70px;
-            }
-
-            #home-background{
-                width:130px;
-
-            }
-
-            h2{
-                font-size:24px;
-            }
-        }
-
-
- 
- 
-    </style>
- 
+  @media only screen and (max-width: 420px){
+    .hero h2{ font-size: 24px; }
+    .radar{ width: 190px; height: 190px; }
+    .slide-track img{ height: 42px; }
+  }
+</style>
 </head>
-    <body>
-       <div class="nav">
-            <div class="menu_buttons">
-                <button type="button" name="button1"><a href="index.html">Home</a></button>
-                <button type="button" name="button2"><a href="page3.html">About</a></button>
-                <button type="button" name="button4"><a href="Page2.html">Services</a></button>
-                <button type="button" name="button4"><a href="Page4.html">Contact Us</a></button>
-                <button name="hamburger-button" id="hamburger-button">&#9776;</button>
-            </div>
-            
-        </div>
-        <div class="menu_buttons2">
-            <button type="button" name="button1"><a href="index.html">Home</a></button>
-            <button type="button" name="button2"><a href="page3.html">About</a></button>
-            <button type="button" name="button4"><a href="Page2.html">Services</a></button>
-            <button type="button" name="button4"><a href="Page4.html">Contact Us</a></button>
-        </div>
-        <div class="logo">
-            <div class="background">
-                <img src="Logo1.png" id="home-background" alt="logo background image">
-                <h2>Africa Security Agency</h2>
-            </div>
-        </div>
- 
-        <div class="slider">
-            <div class="slide-track">
+<body>
 
-                <img src="WECD.jpg" id="WECD" width="360px" height="180px" >
-                <h1>Trusted By<br>Leading<br> Organizations </h1>
-                <img src="toyota-logo.png" id="toyota" width="360px" height="180px" >
-                <img src="engen.png" id="engen" width="360px" height="180px" >
-                <h1>Trusted By<br>Leading<br> Organizations </h1>
-                <img src="CFAO.png" id="CFAO" width="360px" height="180px" >
-                
+  <header>
+    <a class="brand" href="index.html">
+      <img src="Logo1.png" alt="Africa Security Agency logo">
+      Africa Security Agency
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="page3.html">About</a></li>
+        <li><a href="Page2.html">Services</a></li>
+        <li><a href="Page4.html">Contact us</a></li>
+      </ul>
+    </nav>
+    <button id="hamburger-button" aria-label="Toggle menu">&#9776;</button>
+  </header>
 
-                
-                <img src="WECD.jpg" id="WECD" width="360px" height="180px" >
-                <h1>Trusted By<br>Leading<br> Organizations </h1>
-                <img src="toyota-logo.png" id="toyota" width="360px" height="180px" >
-                <img src="engen.png" id="engen" width="360px" height="180px" >
-                <h1>Trusted By<br>Leading<br> Organizations </h1>
-                <img src="CFAO.png" id="CFAO" width="360px" height="180px" >
-                
-            </div>
-            
-        </div>
-        
-        
-        <script>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="page3.html">About</a>
+    <a href="Page2.html">Services</a>
+    <a href="Page4.html">Contact us</a>
+  </div>
 
-            const hamburgerButton = document.getElementById("hamburger-button");
-            const secondMenu = document.getElementsByClassName("menu_buttons2")[0];
-            const fullMenu = document.getElementsByClassName("menu")[0];
-        
-            const firstMenu = document.getElementsByClassName('menuButtons')[0];
-        
-        
-            hamburgerButton.addEventListener('click', function() {
-                if (secondMenu.style.display === "none" || secondMenu.style.display === "") {
-                    // Show the menu
-                    secondMenu.style.display = "flex";
-                    secondMenu.style.opacity = "0.9"; // Make it fully opaque
-                } else {
-                    // Hide the menu with a fade-out effect
-                    secondMenu.style.opacity = "0"; // Fade out
-                    setTimeout(function() {
-                        secondMenu.style.display = "none"; // Hide after fade-out
-                    }, 180);
-                }
-            });
-        
-            window.addEventListener('resize', function() {
-                if (window.innerWidth > 600) {
-                    secondMenu.style.display = "none";
-                }
-            });
-        
-        </script>
- 
-    </body>
-    <footer>
-       <p>Copyright © 2024 Africa Security Agency</p> 
-    </footer>
+  <section class="hero">
+    <div class="radar">
+      <div class="radar-ring r1"></div>
+      <div class="radar-ring r2"></div>
+      <div class="radar-ring r3"></div>
+      <div class="radar-sweep"></div>
+      <img src="Logo1.png" class="logo-mark" alt="Africa Security Agency emblem">
+    </div>
+    <h2>Africa Security Agency</h2>
+    <p class="tagline">Corporate and industrial security solutions built on vigilance, discipline, and rapid response.</p>
+    <a class="cta" href="Page4.html">Request a consultation</a>
+  </section>
+
+  <section class="trusted">
+    <p class="trusted-label">Trusted by leading organizations</p>
+    <div class="slider">
+      <div class="slide-track">
+        <img src="WECD.jpg" alt="WECD">
+        <img src="toyota-logo.png" alt="Toyota">
+        <img src="engen.png" alt="Engen">
+        <img src="CFAO.png" alt="CFAO">
+        <img src="WECD.jpg" alt="WECD">
+        <img src="toyota-logo.png" alt="Toyota">
+        <img src="engen.png" alt="Engen">
+        <img src="CFAO.png" alt="CFAO">
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Copyright &copy; 2024 Africa Security Agency</p>
+  </footer>
+
+  <script>
+    const hamburgerButton = document.getElementById("hamburger-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    hamburgerButton.addEventListener("click", function(){
+      const isOpen = mobileMenu.style.display === "flex";
+      mobileMenu.style.display = isOpen ? "none" : "flex";
+    });
+
+    window.addEventListener("resize", function(){
+      if (window.innerWidth > 640){
+        mobileMenu.style.display = "none";
+      }
+    });
+  </script>
+
+</body>
 </html>
