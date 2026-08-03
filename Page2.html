@@ -1,418 +1,890 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home(md)</title>
-    <style>
-        
-        body{
-            background-image: url("background2.png"); 
-            background-repeat: no-repeat;
-            background-size: cover;
-            margin:0;
-            background-color:black;
-            overflow-x: hidden;
-            
 
-    
-        }
-        .menu_buttons{
-        
-            width:100%;
-            border:none;
-            justify-content:right;
-            
-        
-        
-        
-        }
-        a:hover {
-            color: rgb(255, 6, 6);
-            text-decoration: underline;
-                
-        }
-    
-        button{
-            width: 100px;
-            height: 50px;
-            background-color: transparent;
-            border: none;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: medium;
-    
-        }
+<meta charset="UTF-8">
 
-        a{
-            text-decoration: none;
-            color: aliceblue;
-        }
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-        .service_img{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width:99%;
-            
-        
-        }
-        .service_img img{
-            
-            width:50%;
-        
-        }
+<title>Africa Security Agency | About Us</title>
 
-        .menu{  
-            display:flex;
-            gap: 400px;   
-            width:99%;   
-        }
+<meta name="description"
+content="Learn more about Africa Security Agency, our mission, our values and why businesses trust our security services.">
 
-        .menu img{
-            height: 165px;
-            width: 165px;
-            border-radius: 100%;
-        }
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
 
-        #hamburger-button{
-            color:white;
-            font-size:47px;
-            cursor: pointer;
-            display:none;
-            transition:0.5s ease-in-out;
-        }
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
 
-        #hamburger-button:hover{
-            font-size:52px;
-            transition:0.5s ease-in-out;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Inter:wght@400;500&display=swap"
+rel="stylesheet">
 
-        .redtxt{
-            display: flex;
-            flex-direction:column;
-            width:250px;
-        }
+<style>
 
+:root{
 
-        .redtxt h2{
-            color:red;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            
-        }
+--bg:#0E161C;
+--surface:#16212B;
+--line:#263440;
+--text:#E9EEF1;
+--text-muted:#9FAEB8;
+--accent:#4C90A3;
+--accent-strong:#6BAEC0;
+--signal:#D99A4E;
 
-        .redtxt p{
-            display: flex;
-            color: aliceblue;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: medium;
-        }
-        .service_txt{
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            gap: 100px;
-            width:99%;
+}
 
-        }
+*{
 
-        .ben{
-            color: aliceblue;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: medium;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width:99%;
-            
-        }
-        .ben h2{
-            color:red;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            text-align:center;
-        }
+margin:0;
+padding:0;
+box-sizing:border-box;
 
-        footer{
-            position:relative;
-            display: flex; 
-            justify-content: center;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            background-color: red;
-            color: white;
-            text-align: center;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: x-small;
-            overflow-x:hidden;
-        }
+}
 
-        @media only screen and (max-width:1300px){
-            .service_img img {
-                width:60%;
-            }
-        }
+html{
 
-        @media only screen and (max-width:1200px){
-            .service_img img{
-                width:65%;
-            }
-        }
+scroll-behavior:smooth;
 
-        @media only screen and (max-width:1100px){
-            .service_img img{
-                width:70%;
-            }
-        }
-        @media only screen and (max-width:1000px){
-            .service_img img{
-                width:75%;
-                
-            }
-        }
+}
 
+body{
 
+background:var(--bg);
+color:var(--text);
+font-family:'Inter',sans-serif;
+overflow-x:hidden;
 
-        @media only screen and (max-width:1050px){
-            .menu{
-                gap:300px;
-            }
-        }
+}
 
+h1,h2,h3{
 
-        @media only screen and (max-width:950px){
-            .menu{
-                gap:200px;
-            }
-        }
+font-family:'Oswald',sans-serif;
+font-weight:500;
+letter-spacing:.03em;
 
-        @media only screen and (max-width:850px){
-            .menu{
-                gap:100px;
-            }
+}
 
-            .service_img img{
-                width:80%;
-            }
+p{
 
-            .menu img{
-                width:150px;
-                height:150px;
-            }
-        }
+line-height:1.8;
+color:var(--text-muted);
 
-        @media only screen and (max-width:750px){
-            .menu{
-                gap:0px;
-            }
+}
 
-            .menu img{
-                width:130px;
-                height:130px;
-            }
-        }
+a{
 
-        @media only screen and (max-width:700px){
-            .service_img img{
-                width:100%;
-                height:400px;
-            }
+text-decoration:none;
+color:inherit;
 
-            .service_txt{
-                flex-direction:column;
-                gap:10px;
-                align-items: center;
-            }
+}
 
-        }
+img{
 
-        @media only screen and (max-width:600px){
+display:block;
+max-width:100%;
 
-            .menu{
-                align-items: center;
-            }
-            .menu_buttons button{
-                display:none;
-            }
+}
 
-            #hamburger-button{
-                display:flex;
-                color:rgb(189, 181, 175);
-                align-items:center;
-                justify-content: center;
-                width:48px;
-                height:48px;
-                
-            }
+/*====================
+HEADER
+====================*/
 
+header{
 
+position:fixed;
 
-            .menu img {
-                width:100px;
-                height:100px;
-            }
+top:0;
+left:0;
 
-            .menu_buttons2{
-                height:330px;
-            }
-        }
+width:100%;
 
+display:flex;
 
-        @media only screen and (max-width:500px){
-            .service_img img {
-                width:100%;
-                height:250px;
-            }
+justify-content:space-between;
+align-items:center;
 
-            .menu_buttons2{
-                height:250px;
-            }
+padding:18px 40px;
 
-            
-        }
+z-index:1000;
 
-        @media only screen and (max-width:300px){
-            .service_txt h2{
-                font-size: 20px;
-            }
+background:linear-gradient(
+to bottom,
+rgba(14,22,28,.92),
+rgba(14,22,28,0)
+);
 
-            .service_txt p{
-                font-size:15px
-            }
-        }
+}
 
+.brand{
 
-        .menu_buttons2{
-            display: none;
-            opacity: 0.9;
-            z-index: 2;
-            position: absolute;
-            background-color: black;
-            width: 110%;
-            flex-direction: column;
-            transition: opacity 0.3s ease-in-out;
-    
-            animation: slideDown 0.5s ease-in-out;
-            
+display:flex;
+align-items:center;
+gap:12px;
 
-        }
+font-family:'Oswald',sans-serif;
 
-        @keyframes slideDown {
-            0% {
-                transform: translateY(-100%);
-                opacity: 0;
-            }
-            100% {
-                transform: translateY(0);
-                opacity: 0.9;
-            }
-        }
+text-transform:uppercase;
 
-        
-    </style>
+letter-spacing:.08em;
 
+font-size:15px;
 
+}
+
+.brand img{
+
+width:34px;
+height:34px;
+
+object-fit:contain;
+
+}
+
+nav ul{
+
+display:flex;
+
+list-style:none;
+
+gap:8px;
+
+}
+
+nav a{
+
+padding:10px 16px;
+
+border-radius:3px;
+
+transition:.25s;
+
+}
+
+nav a:hover{
+
+background:rgba(255,255,255,.05);
+
+color:var(--accent-strong);
+
+}
+
+#hamburger-button{
+
+display:none;
+
+background:none;
+
+border:none;
+
+font-size:30px;
+
+cursor:pointer;
+
+color:white;
+
+}
+
+/*====================
+MOBILE MENU
+====================*/
+
+.mobile-menu{
+
+display:none;
+
+flex-direction:column;
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+background:var(--surface);
+
+border-bottom:1px solid var(--line);
+
+z-index:999;
+
+padding:15px 0;
+
+}
+
+.mobile-menu a{
+
+padding:15px 25px;
+
+border-top:1px solid var(--line);
+
+}
+
+.mobile-menu a:first-child{
+
+border-top:none;
+
+}
+/*==========================
+HERO
+==========================*/
+
+.hero{
+
+    position:relative;
+
+    min-height:70vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:140px 20px 80px;
+
+    background-image:
+    linear-gradient(rgba(14,22,28,.65),
+    rgba(14,22,28,.90)),
+    url("background2.png");
+
+    background-size:cover;
+    background-position:center;
+
+}
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background-image:
+    repeating-linear-gradient(
+        0deg,
+        rgba(255,255,255,.02) 0,
+        rgba(255,255,255,.02) 1px,
+        transparent 1px,
+        transparent 60px
+    ),
+    repeating-linear-gradient(
+        90deg,
+        rgba(255,255,255,.02) 0,
+        rgba(255,255,255,.02) 1px,
+        transparent 1px,
+        transparent 60px
+    );
+
+}
+
+.hero-content{
+
+    position:relative;
+    z-index:2;
+    max-width:850px;
+
+}
+
+.hero h1{
+
+    font-size:58px;
+    text-transform:uppercase;
+    margin-bottom:20px;
+
+}
+
+.hero p{
+
+    max-width:700px;
+    margin:auto;
+    font-size:18px;
+
+}
+
+.cta{
+
+    display:inline-block;
+    margin-top:35px;
+
+    background:var(--signal);
+    color:var(--bg);
+
+    padding:15px 38px;
+
+    border-radius:3px;
+
+    font-family:'Oswald',sans-serif;
+
+    text-transform:uppercase;
+
+    transition:.25s;
+
+}
+
+.cta:hover{
+
+    background:#e5ad63;
+
+    transform:translateY(-2px);
+
+}
+
+/*==========================
+CONTENT
+==========================*/
+
+.container{
+
+    width:min(1200px,92%);
+    margin:auto;
+
+}
+
+.section{
+
+    padding:90px 0;
+
+}
+
+.section-title{
+
+    text-align:center;
+    font-size:42px;
+    margin-bottom:20px;
+
+}
+
+.section-subtitle{
+
+    max-width:750px;
+    margin:0 auto 60px;
+    text-align:center;
+
+}
+
+/*==========================
+ABOUT GRID
+==========================*/
+
+.about-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:35px;
+
+}
+
+.about-card{
+
+    background:var(--surface);
+
+    border:1px solid var(--line);
+
+    border-radius:8px;
+
+    padding:35px;
+
+    transition:.3s;
+
+}
+
+.about-card:hover{
+
+    transform:translateY(-6px);
+
+    border-color:var(--accent);
+
+}
+
+.about-card h3{
+
+    margin-bottom:20px;
+
+    font-size:30px;
+
+}
+
+/*==========================
+MISSION
+==========================*/
+
+.mission{
+
+    margin-top:60px;
+
+    background:var(--surface);
+
+    border:1px solid var(--accent);
+
+    border-radius:8px;
+
+    text-align:center;
+
+    padding:45px;
+
+}
+
+.mission h2{
+
+    margin-bottom:20px;
+
+    font-size:38px;
+
+}
+
+/*==========================
+CTA
+==========================*/
+
+.cta-section{
+
+    padding:100px 20px;
+
+    text-align:center;
+
+}
+
+.cta-section h2{
+
+    font-size:42px;
+
+    margin-bottom:20px;
+
+}
+
+.cta-section p{
+
+    max-width:700px;
+
+    margin:auto;
+
+}
+
+/*==========================
+FOOTER
+==========================*/
+
+footer{
+
+    border-top:1px solid var(--line);
+
+    text-align:center;
+
+    padding:25px;
+
+    color:var(--text-muted);
+
+}
+
+/*==========================
+RESPONSIVE
+==========================*/
+
+@media(max-width:950px){
+
+.about-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.hero h1{
+
+font-size:42px;
+
+}
+
+}
+
+@media(max-width:640px){
+
+header{
+
+padding:16px 20px;
+
+}
+
+nav ul{
+
+display:none;
+
+}
+
+#hamburger-button{
+
+display:block;
+
+}
+
+.hero h1{
+
+font-size:32px;
+
+}
+
+.hero p{
+
+font-size:16px;
+
+}
+
+.section-title{
+
+font-size:32px;
+
+}
+
+.mission h2{
+
+font-size:30px;
+
+}
+
+}
+
+</style>
 
 </head>
+
 <body>
-    <main>
-        <div class="menu">
-            <img src="Logoc.png" alt="Profile Image" class="fixed-image" >
-            <div class="menu_buttons">
-                <button type="button" name="button1"><a href="index.html">Home</a></button>
-                <button type="button" name="button2"><a href="page3.html">About</a></button>
-                <button type="button" name="button4"><a href="Page2.html">Services</a></button>
-                <button type="button" name="button4"><a href="Page4.html">Contact Us</a></button>
-                
+    <!-- ==========================
+HEADER
+========================== -->
+
+<header>
+
+    <a class="brand" href="index.html">
+        <img src="Logo1.png" alt="Africa Security Agency Logo">
+        Africa Security Agency
+    </a>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="page3.html">About</a></li>
+            <li><a href="Page2.html">Services</a></li>
+            <li><a href="Page4.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <button id="hamburger-button" aria-label="Toggle Menu">
+        &#9776;
+    </button>
+
+</header>
+
+<!-- ==========================
+MOBILE MENU
+========================== -->
+
+<div class="mobile-menu" id="mobile-menu">
+
+    <a href="index.html">Home</a>
+    <a href="page3.html">About</a>
+    <a href="Page2.html">Services</a>
+    <a href="Page4.html">Contact Us</a>
+
+</div>
+
+<!-- ==========================
+HERO
+========================== -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>About Africa Security Agency</h1>
+
+        <p>
+
+            Delivering professional security solutions through
+            experience, integrity and a commitment to protecting
+            people, businesses and valuable assets.
+
+        </p>
+
+        <a class="cta" href="Page4.html">
+            Contact Our Team
+        </a>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+ABOUT SECTION
+========================== -->
+
+<section class="section">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            About Us
+        </h2>
+
+        <p class="section-subtitle">
+
+            Since our establishment, Africa Security Agency has
+            focused on providing dependable security services that
+            build long-term partnerships with clients across multiple
+            industries.
+
+        </p>
+
+        <div class="about-grid">
+
+            <div class="about-card">
+
+                <h3>Who We Are</h3>
+
+                <p>
+
+                    Founded in 2017 as a response company serving the
+                    residential market in Cape Town, Africa Security
+                    Agency has grown into a complete security solutions
+                    provider serving clients throughout the Western Cape
+                    and Gauteng.
+
+                </p>
+
+                <br>
+
+                <p>
+
+                    Our customised services are designed to meet each
+                    client's unique operational requirements while
+                    maintaining the highest standards of professionalism.
+
+                </p>
+
             </div>
-            <button name="hamburger-button" id="hamburger-button">&#9776;</button>
-            
-        </div>
-        <div class="menu_buttons2">
-            <button type="button" name="button1"><a href="index.html">Home</a></button>
-            <button type="button" name="button2"><a href="page3.html">About</a></button>
-            <button type="button" name="button4"><a href="Page2.html">Services</a></button>
-            <button type="button" name="button4"><a href="Page4.html">Contact Us</a></button>
-        </div>
-    
-        <div class="service_img">
-            <img src="services.png">
+
+            <div class="about-card">
+
+                <h3>Why Clients Choose ASA</h3>
+
+                <p>
+
+                    Our directors remain actively involved in every client
+                    relationship, providing direct oversight and ensuring
+                    exceptional service delivery.
+
+                </p>
+
+                <br>
+
+                <p>
+
+                    Managers and supervisors work closely with our guards,
+                    supporting their development while ensuring clients
+                    receive dependable, proactive security services every
+                    day.
+
+                </p>
+
+            </div>
+
         </div>
 
-    <div class="service_txt">
-    
-        <div class="redtxt">
-            <h2>On Site Gaurding</h2>
-            <p>
-                    Our on-site security professionals are a vital extension to our clients' workforce.
-                    They operate proactively to protect people, property and assets and can provide front of house services.
-            </p>
-        </div>
-        <div class="redtxt">
-            <h2>Specialised Guarding</h2>
-            <p>
-                Our specialised security professionals provide our clients with additional layers of security and action
-                more complex tasks, including canine service and VIP protection.
-            </p>
-        </div>
-            
-        <div class="redtxt">
-            <h2>Response Guarding</h2>
-            <p>
-                Our response security professionals are dispatched by our controller.
-                They operate and are dispatched strategically to ensure the shortest possible route to action.
-            </p>
-        </div>
     </div>
-    <br>
-    <div class="ben">
-    
-        <h2>BENEFITS OF USING ASA’S SERVICES</h2>
-        
-        <ul>
-            <li>Unique tailor made operational SLA.   
-            <li>Solid and proven track record.</li>
-            <li>Motivated guard force.</li>
-            <li>Excellent management support.</li>
-            <li>Quality training.</li>
-            <li>Corporate governance.</li>
-            <li>Quality management system.</li>
-        </ul>
+
+</section>
+<!-- ==========================
+MISSION STATEMENT
+========================== -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="mission">
+
+            <h2>Our Mission</h2>
+
+            <p>
+
+                To provide holistic, tailor-made security solutions
+                based on each client's unique business profile while
+                maintaining the highest standards of professionalism,
+                integrity and service excellence.
+
+            </p>
+
+        </div>
+
     </div>
-</main>
+
+</section>
+
+<!-- ==========================
+OUR VALUES
+========================== -->
+
+<section class="section">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Our Core Values
+        </h2>
+
+        <p class="section-subtitle">
+
+            Everything we do is guided by the values that have helped
+            establish Africa Security Agency as a trusted security partner.
+
+        </p>
+
+        <div class="about-grid">
+
+            <div class="about-card">
+
+                <h3>Integrity</h3>
+
+                <p>
+
+                    We conduct every operation with honesty,
+                    accountability and professionalism, building trust
+                    with every client.
+
+                </p>
+
+            </div>
+
+            <div class="about-card">
+
+                <h3>Commitment</h3>
+
+                <p>
+
+                    We are committed to protecting our clients,
+                    responding quickly to incidents and continuously
+                    improving our services.
+
+                </p>
+
+            </div>
+
+            <div class="about-card">
+
+                <h3>Innovation</h3>
+
+                <p>
+
+                    By combining skilled personnel with modern security
+                    practices, we deliver reliable and effective
+                    security solutions.
+
+                </p>
+
+            </div>
+
+            <div class="about-card">
+
+                <h3>Partnership</h3>
+
+                <p>
+
+                    We believe in developing long-term relationships
+                    with our clients through communication, reliability
+                    and outstanding service.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+CALL TO ACTION
+========================== -->
+
+<section class="cta-section">
+
+    <div class="container">
+
+        <h2>
+            Partner With Africa Security Agency
+        </h2>
+
+        <p>
+
+            Whether you require guarding services, rapid response,
+            specialised security or integrated security solutions,
+            our experienced team is ready to help protect what matters
+            most.
+
+        </p>
+
+        <a href="Page4.html" class="cta">
+            Contact Us Today
+        </a>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+FOOTER
+========================== -->
+
+<footer>
+
+    <p>
+        Copyright &copy; 2024 Africa Security Agency
+    </p>
+
+</footer>
+
 <script>
 
-    const hamburgerButton = document.getElementById("hamburger-button");
-    const secondMenu = document.getElementsByClassName("menu_buttons2")[0];
-    const fullMenu = document.getElementsByClassName("menu")[0];
+const hamburgerButton =
+document.getElementById("hamburger-button");
 
-    const firstMenu = document.getElementsByClassName('menuButtons')[0];
+const mobileMenu =
+document.getElementById("mobile-menu");
 
+hamburgerButton.addEventListener("click",function(){
 
-    hamburgerButton.addEventListener('click', function() {
-        if (secondMenu.style.display === "none" || secondMenu.style.display === "") {
-            // Show the menu
-            secondMenu.style.display = "flex";
-            secondMenu.style.opacity = "0.9"; // Make it fully opaque
-        } else {
-            // Hide the menu with a fade-out effect
-            secondMenu.style.opacity = "0"; // Fade out
-            setTimeout(function() {
-                secondMenu.style.display = "none"; // Hide after fade-out
-            }, 300);
-        }
-    });
+    if(mobileMenu.style.display==="flex"){
 
-    window.addEventListener('resize', function() {
-        if (window.innerWidth > 600) {
-            secondMenu.style.display = "none";
-        }
-    });
+        mobileMenu.style.display="none";
+
+    }else{
+
+        mobileMenu.style.display="flex";
+
+    }
+
+});
+
+window.addEventListener("resize",function(){
+
+    if(window.innerWidth>640){
+
+        mobileMenu.style.display="none";
+
+    }
+
+});
 
 </script>
+
 </body>
-<br>
-<br>
-<footer>
-    <p>Copyright © 2024 Africa Security Agency</p> 
- </footer>
+
 </html>
