@@ -1,233 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
-
-<title>Africa Security Agency | About Us</title>
+<title>Africa Security Agency | Security Services</title>
 
 <meta name="description"
-content="Learn more about Africa Security Agency, our mission, our values and why businesses trust our security services.">
+content="Professional security services provided by Africa Security Agency.">
 
-<link rel="preconnect"
-href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link rel="preconnect"
-href="https://fonts.gstatic.com"
-crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Inter:wght@400;500&display=swap"
-rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 
 <style>
 
 :root{
-
---bg:#0E161C;
---surface:#16212B;
---line:#263440;
---text:#E9EEF1;
---text-muted:#9FAEB8;
---accent:#4C90A3;
---accent-strong:#6BAEC0;
---signal:#D99A4E;
-
+    --bg:#0E161C;
+    --surface:#16212B;
+    --line:#263440;
+    --text:#E9EEF1;
+    --text-muted:#9FAEB8;
+    --accent:#4C90A3;
+    --accent-strong:#6BAEC0;
+    --signal:#D99A4E;
 }
 
 *{
-
-margin:0;
-padding:0;
-box-sizing:border-box;
-
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 html{
-
-scroll-behavior:smooth;
-
+    scroll-behavior:smooth;
 }
 
 body{
 
-background:var(--bg);
-color:var(--text);
-font-family:'Inter',sans-serif;
-overflow-x:hidden;
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter',sans-serif;
+    overflow-x:hidden;
 
 }
 
 h1,h2,h3{
 
-font-family:'Oswald',sans-serif;
-font-weight:500;
-letter-spacing:.03em;
+    font-family:'Oswald',sans-serif;
+    font-weight:500;
+    letter-spacing:.03em;
 
 }
 
 p{
 
-line-height:1.8;
-color:var(--text-muted);
+    color:var(--text-muted);
+    line-height:1.8;
 
 }
 
 a{
 
-text-decoration:none;
-color:inherit;
+    color:inherit;
+    text-decoration:none;
 
 }
 
 img{
 
-display:block;
-max-width:100%;
+    max-width:100%;
+    display:block;
 
 }
 
-/*====================
+/*==========================
 HEADER
-====================*/
+==========================*/
 
 header{
 
-position:fixed;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
 
-top:0;
-left:0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 
-width:100%;
+    padding:18px 40px;
 
-display:flex;
-
-justify-content:space-between;
-align-items:center;
-
-padding:18px 40px;
-
-z-index:1000;
-
-background:linear-gradient(
-to bottom,
-rgba(14,22,28,.92),
-rgba(14,22,28,0)
-);
+    background:linear-gradient(
+        to bottom,
+        rgba(14,22,28,.92),
+        rgba(14,22,28,0)
+    );
 
 }
 
 .brand{
 
-display:flex;
-align-items:center;
-gap:12px;
+    display:flex;
+    align-items:center;
+    gap:12px;
 
-font-family:'Oswald',sans-serif;
+    font-family:'Oswald',sans-serif;
 
-text-transform:uppercase;
+    text-transform:uppercase;
+    letter-spacing:.08em;
 
-letter-spacing:.08em;
-
-font-size:15px;
+    font-size:15px;
 
 }
 
 .brand img{
 
-width:34px;
-height:34px;
-
-object-fit:contain;
+    width:34px;
+    height:34px;
+    object-fit:contain;
 
 }
 
 nav ul{
 
-display:flex;
+    list-style:none;
 
-list-style:none;
-
-gap:8px;
+    display:flex;
+    gap:8px;
 
 }
 
 nav a{
 
-padding:10px 16px;
+    padding:10px 16px;
 
-border-radius:3px;
+    border-radius:3px;
 
-transition:.25s;
+    transition:.25s;
 
 }
 
 nav a:hover{
 
-background:rgba(255,255,255,.05);
+    color:var(--accent-strong);
 
-color:var(--accent-strong);
+    background:rgba(255,255,255,.05);
 
 }
 
 #hamburger-button{
 
-display:none;
+    display:none;
 
-background:none;
+    background:none;
+    border:none;
 
-border:none;
+    color:white;
 
-font-size:30px;
+    font-size:30px;
 
-cursor:pointer;
-
-color:white;
+    cursor:pointer;
 
 }
 
-/*====================
+/*==========================
 MOBILE MENU
-====================*/
+==========================*/
 
 .mobile-menu{
 
-display:none;
+    display:none;
 
-flex-direction:column;
+    flex-direction:column;
 
-position:fixed;
+    position:fixed;
 
-top:0;
+    top:0;
+    left:0;
 
-left:0;
+    width:100%;
 
-width:100%;
+    background:var(--surface);
 
-background:var(--surface);
+    border-bottom:1px solid var(--line);
 
-border-bottom:1px solid var(--line);
+    z-index:999;
 
-z-index:999;
-
-padding:15px 0;
+    padding:15px 0;
 
 }
 
 .mobile-menu a{
 
-padding:15px 25px;
+    padding:15px 25px;
 
-border-top:1px solid var(--line);
+    border-top:1px solid var(--line);
 
 }
 
 .mobile-menu a:first-child{
 
-border-top:none;
+    border-top:none;
 
 }
 /*==========================
@@ -274,6 +251,7 @@ HERO
         transparent 1px,
         transparent 60px
     ),
+
     repeating-linear-gradient(
         90deg,
         rgba(255,255,255,.02) 0,
@@ -295,25 +273,31 @@ HERO
 .hero h1{
 
     font-size:58px;
+
     text-transform:uppercase;
+
     margin-bottom:20px;
 
 }
 
 .hero p{
 
-    max-width:700px;
-    margin:auto;
     font-size:18px;
+
+    max-width:700px;
+
+    margin:auto;
 
 }
 
 .cta{
 
     display:inline-block;
+
     margin-top:35px;
 
     background:var(--signal);
+
     color:var(--bg);
 
     padding:15px 38px;
@@ -323,6 +307,8 @@ HERO
     font-family:'Oswald',sans-serif;
 
     text-transform:uppercase;
+
+    letter-spacing:.06em;
 
     transition:.25s;
 
@@ -356,34 +342,59 @@ CONTENT
 .section-title{
 
     text-align:center;
+
     font-size:42px;
+
     margin-bottom:20px;
 
 }
 
 .section-subtitle{
 
-    max-width:750px;
-    margin:0 auto 60px;
     text-align:center;
+
+    max-width:700px;
+
+    margin:auto auto 60px;
 
 }
 
 /*==========================
-ABOUT GRID
+SERVICES IMAGE
 ==========================*/
 
-.about-grid{
+.service-banner{
 
-    display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:35px;
+    margin-bottom:80px;
 
 }
 
-.about-card{
+.service-banner img{
+
+    width:100%;
+
+    border-radius:8px;
+
+    border:1px solid var(--line);
+
+}
+
+/*==========================
+SERVICE CARDS
+==========================*/
+
+.services-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+.service-card{
 
     background:var(--surface);
 
@@ -397,65 +408,92 @@ ABOUT GRID
 
 }
 
-.about-card:hover{
+.service-card:hover{
 
-    transform:translateY(-6px);
+    transform:translateY(-8px);
 
     border-color:var(--accent);
 
 }
 
-.about-card h3{
+.service-card h3{
 
     margin-bottom:20px;
 
-    font-size:30px;
+    font-size:28px;
+
+}
+
+.service-card p{
+
+    font-size:15px;
 
 }
 
 /*==========================
-MISSION
+BENEFITS
 ==========================*/
 
-.mission{
+.benefits{
 
-    margin-top:60px;
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:24px;
+
+}
+
+.benefit{
 
     background:var(--surface);
 
-    border:1px solid var(--accent);
+    border:1px solid var(--line);
+
+    padding:25px;
 
     border-radius:8px;
 
-    text-align:center;
-
-    padding:45px;
+    transition:.3s;
 
 }
 
-.mission h2{
+.benefit:hover{
 
-    margin-bottom:20px;
+    border-color:var(--accent);
 
-    font-size:38px;
+    transform:translateY(-4px);
+
+}
+
+.benefit h4{
+
+    font-family:'Oswald',sans-serif;
+
+    color:var(--text);
+
+    margin-bottom:12px;
+
+    font-size:22px;
 
 }
 
 /*==========================
-CTA
+CALL TO ACTION
 ==========================*/
 
 .cta-section{
 
-    padding:100px 20px;
-
     text-align:center;
+
+    padding:110px 20px;
 
 }
 
 .cta-section h2{
 
-    font-size:42px;
+    font-size:44px;
 
     margin-bottom:20px;
 
@@ -477,9 +515,9 @@ footer{
 
     border-top:1px solid var(--line);
 
-    text-align:center;
-
     padding:25px;
+
+    text-align:center;
 
     color:var(--text-muted);
 
@@ -491,7 +529,13 @@ RESPONSIVE
 
 @media(max-width:950px){
 
-.about-grid{
+.services-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.benefits{
 
 grid-template-columns:1fr;
 
@@ -543,16 +587,9 @@ font-size:32px;
 
 }
 
-.mission h2{
-
-font-size:30px;
-
-}
-
 }
 
 </style>
-
 </head>
 
 <body>
@@ -603,18 +640,18 @@ HERO
 
     <div class="hero-content">
 
-        <h1>About Africa Security Agency</h1>
+        <h1>Security Services</h1>
 
         <p>
 
-            Delivering professional security solutions through
-            experience, integrity and a commitment to protecting
-            people, businesses and valuable assets.
+            Africa Security Agency delivers professional guarding,
+            response, and specialist security services designed to
+            protect your people, property, and business operations.
 
         </p>
 
         <a class="cta" href="Page4.html">
-            Contact Our Team
+            Request a Consultation
         </a>
 
     </div>
@@ -622,7 +659,84 @@ HERO
 </section>
 
 <!-- ==========================
-ABOUT SECTION
+SERVICES
+========================== -->
+
+<section class="section">
+
+<div class="container">
+
+<h2 class="section-title">
+Our Services
+</h2>
+
+<p class="section-subtitle">
+
+Tailored security solutions backed by experienced personnel,
+rapid response capabilities and a commitment to protecting
+our clients at every level.
+
+</p>
+
+<div class="service-banner">
+
+<img src="services.png" alt="Africa Security Agency Services">
+
+</div>
+
+<div class="services-grid">
+
+<div class="service-card">
+
+<h3>On-Site Guarding</h3>
+
+<p>
+
+Our on-site security professionals are a vital extension of our
+clients' workforce. They operate proactively to protect people,
+property and assets while also providing professional front-of-house
+security services.
+
+</p>
+
+</div>
+
+<div class="service-card">
+
+<h3>Specialised Guarding</h3>
+
+<p>
+
+Our specialised security professionals provide additional layers of
+security through advanced services including canine units, VIP
+protection and other specialist security operations tailored to
+client requirements.
+
+</p>
+
+</div>
+
+<div class="service-card">
+
+<h3>Response Guarding</h3>
+
+<p>
+
+Our response officers are strategically positioned and dispatched by
+our control room to ensure the fastest possible response to security
+incidents whenever assistance is required.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- ==========================
+BENEFITS
 ========================== -->
 
 <section class="section">
@@ -630,178 +744,70 @@ ABOUT SECTION
     <div class="container">
 
         <h2 class="section-title">
-            About Us
+            Benefits of Using ASA's Services
         </h2>
 
         <p class="section-subtitle">
-
-            Since our establishment, Africa Security Agency has
-            focused on providing dependable security services that
-            build long-term partnerships with clients across multiple
-            industries.
-
+            We provide dependable security solutions backed by experienced personnel,
+            professional management and a commitment to quality service.
         </p>
 
-        <div class="about-grid">
+        <div class="benefits">
 
-            <div class="about-card">
-
-                <h3>Who We Are</h3>
-
+            <div class="benefit">
+                <h4>✓ Tailor-Made Operational SLA</h4>
                 <p>
-
-                    Founded in 2017 as a response company serving the
-                    residential market in Cape Town, Africa Security
-                    Agency has grown into a complete security solutions
-                    provider serving clients throughout the Western Cape
-                    and Gauteng.
-
+                    Every client receives a customised security plan designed
+                    around their operational requirements.
                 </p>
-
-                <br>
-
-                <p>
-
-                    Our customised services are designed to meet each
-                    client's unique operational requirements while
-                    maintaining the highest standards of professionalism.
-
-                </p>
-
             </div>
 
-            <div class="about-card">
-
-                <h3>Why Clients Choose ASA</h3>
-
+            <div class="benefit">
+                <h4>✓ Proven Track Record</h4>
                 <p>
-
-                    Our directors remain actively involved in every client
-                    relationship, providing direct oversight and ensuring
-                    exceptional service delivery.
-
+                    Years of experience providing reliable security solutions
+                    across multiple industries.
                 </p>
-
-                <br>
-
-                <p>
-
-                    Managers and supervisors work closely with our guards,
-                    supporting their development while ensuring clients
-                    receive dependable, proactive security services every
-                    day.
-
-                </p>
-
             </div>
 
-        </div>
-
-    </div>
-
-</section>
-<!-- ==========================
-MISSION STATEMENT
-========================== -->
-
-<section class="section">
-
-    <div class="container">
-
-        <div class="mission">
-
-            <h2>Our Mission</h2>
-
-            <p>
-
-                To provide holistic, tailor-made security solutions
-                based on each client's unique business profile while
-                maintaining the highest standards of professionalism,
-                integrity and service excellence.
-
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ==========================
-OUR VALUES
-========================== -->
-
-<section class="section">
-
-    <div class="container">
-
-        <h2 class="section-title">
-            Our Core Values
-        </h2>
-
-        <p class="section-subtitle">
-
-            Everything we do is guided by the values that have helped
-            establish Africa Security Agency as a trusted security partner.
-
-        </p>
-
-        <div class="about-grid">
-
-            <div class="about-card">
-
-                <h3>Integrity</h3>
-
+            <div class="benefit">
+                <h4>✓ Motivated Guard Force</h4>
                 <p>
-
-                    We conduct every operation with honesty,
-                    accountability and professionalism, building trust
-                    with every client.
-
+                    Professional security officers committed to protecting
+                    your people, property and assets.
                 </p>
-
             </div>
 
-            <div class="about-card">
-
-                <h3>Commitment</h3>
-
+            <div class="benefit">
+                <h4>✓ Excellent Management Support</h4>
                 <p>
-
-                    We are committed to protecting our clients,
-                    responding quickly to incidents and continuously
-                    improving our services.
-
+                    Supervisors and management remain actively involved
+                    to ensure consistently high standards.
                 </p>
-
             </div>
 
-            <div class="about-card">
-
-                <h3>Innovation</h3>
-
+            <div class="benefit">
+                <h4>✓ Quality Training</h4>
                 <p>
-
-                    By combining skilled personnel with modern security
-                    practices, we deliver reliable and effective
-                    security solutions.
-
+                    Continuous training ensures our officers remain
+                    prepared for modern security challenges.
                 </p>
-
             </div>
 
-            <div class="about-card">
-
-                <h3>Partnership</h3>
-
+            <div class="benefit">
+                <h4>✓ Corporate Governance</h4>
                 <p>
-
-                    We believe in developing long-term relationships
-                    with our clients through communication, reliability
-                    and outstanding service.
-
+                    Professional business practices combined with
+                    accountability and integrity.
                 </p>
+            </div>
 
+            <div class="benefit">
+                <h4>✓ Quality Management System</h4>
+                <p>
+                    Processes and procedures focused on maintaining
+                    consistent service excellence.
+                </p>
             </div>
 
         </div>
@@ -819,15 +825,15 @@ CALL TO ACTION
     <div class="container">
 
         <h2>
-            Partner With Africa Security Agency
+            Protect What Matters Most
         </h2>
 
         <p>
 
-            Whether you require guarding services, rapid response,
-            specialised security or integrated security solutions,
-            our experienced team is ready to help protect what matters
-            most.
+            Whether you require on-site guarding, specialised protection,
+            or rapid response services, Africa Security Agency is ready
+            to provide a professional security solution tailored to
+            your business.
 
         </p>
 
@@ -859,13 +865,15 @@ document.getElementById("hamburger-button");
 const mobileMenu =
 document.getElementById("mobile-menu");
 
-hamburgerButton.addEventListener("click",function(){
+hamburgerButton.addEventListener("click", function(){
 
     if(mobileMenu.style.display==="flex"){
 
         mobileMenu.style.display="none";
 
-    }else{
+    }
+
+    else{
 
         mobileMenu.style.display="flex";
 
@@ -886,5 +894,4 @@ window.addEventListener("resize",function(){
 </script>
 
 </body>
-
 </html>
